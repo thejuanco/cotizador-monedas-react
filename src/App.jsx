@@ -1,15 +1,14 @@
-import { useState } from 'react'
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <div className="my-20 max-w-lg mx-auto bg-white shadow p-10 rounded-lg">
+        <Header/>
+      </div>
     </>
-  )
+  );
 }
 
 export default App
