@@ -6,6 +6,6 @@ const Header = () => {
       ¿Cuanto <span className="text-indigo-600">dinero</span> necesitas?
     </h1>
   );
-}
+};
 
 export default Header
