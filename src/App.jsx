@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header";
-import Button from "./components/Button";
+import CustomButton from "./components/CustomButton";
 
 function App() {
   //Uso del state
@@ -41,11 +41,11 @@ function App() {
         <Header />
 
         <div className="flex justify-between my-6">
-          <Button 
+          <CustomButton 
             operador="-"
             fn={handleClickDecremento}
           />
-          <Button
+          <CustomButton
             operador="+"
             fn={handleClickIncremento}
           />
