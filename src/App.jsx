@@ -19,6 +19,7 @@ function App() {
 
   function handleClickDecremento(){
     const valor = cantidad - step;
+    //Validacion de la cantidad minima
     if (valor < min){
       alert("Cantidad no valida")
       return;
