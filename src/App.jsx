@@ -8,6 +8,7 @@ function App() {
   const [cantidad, setCantidad] = useState(10000);
   //? El state siempre se modifica en el set, nunca se modifica directamente
   const [meses, setMeses] = useState(6);
+  const [total, setTotal] = useState(0);
 
   const min = 0
   const max = 20000
