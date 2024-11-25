@@ -7,6 +7,7 @@ function App() {
   //Uso del state
   const [cantidad, setCantidad] = useState(10000);
   //? El state siempre se modifica en el set, nunca se modifica directamente
+  const [meses, setMeses] = useState(6);
 
   const min = 0
   const max = 20000
@@ -66,6 +67,8 @@ function App() {
 
         <select
           className="mt-5 p-2 bg-white w-full border border-gray-300 rounded-lg text-center text-xl text-gray-500"
+          value={meses}
+          onChange={ e => setMeses(e.target.value)}
         >
           <option value="6">6 meses</option>
           <option value="12">12 meses</option>
