@@ -9,11 +9,18 @@ function App() {
   //? El state siempre se modifica en el set, nunca se modifica directamente
   const [meses, setMeses] = useState(6);
   const [total, setTotal] = useState(0);
+  const [pago, setPago] = useState(0)
 
+  //? Dividir los useffect en multiples dependencias para controlarlos mejor
   useEffect(() => {
     const resultadoTotalPagar = calcularTotalPagar(cantidad, meses)
     setTotal(resultadoTotalPagar)
   }, [cantidad, meses])
+
+  useEffect(() => {
+    //Calcular el pago mensual
+    setPago(total / meses)
+  }, [total])
 
   const min = 0
   const max = 20000
@@ -88,7 +95,7 @@ function App() {
 
           <p className="text-xl text-gray-500 text-center font-bold">{meses} Meses</p>
           <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(total)} Total a pagar</p>
-          <p className="text-xl text-gray-500 text-center font-bold">Mensuales</p>
+          <p className="text-xl text-gray-500 text-center font-bold">{formatearDinero(pago)} Mensuales</p>
         </div>
 
       </div>
