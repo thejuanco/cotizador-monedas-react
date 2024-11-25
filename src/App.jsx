@@ -42,14 +42,8 @@ function App() {
         <Header />
 
         <div className="flex justify-between my-6">
-          <CustomButton 
-            operador="-"
-            fn={handleClickDecremento}
-          />
-          <CustomButton
-            operador="+"
-            fn={handleClickIncremento}
-          />
+          <CustomButton operador="-" fn={handleClickDecremento} />
+          <CustomButton operador="+" fn={handleClickIncremento} />
         </div>
 
         <input
@@ -62,7 +56,21 @@ function App() {
           step={step}
           value={cantidad} //se muestra el valor actual en el input
         />
-        <p className="text-center my-8 text-5xl font-extrabold text-indigo-600">{formatearDinero(cantidad)}</p>
+        <p className="text-center my-8 text-5xl font-extrabold text-indigo-600">
+          {formatearDinero(cantidad)}
+        </p>
+
+        <h2 className="text-2xl font-extrabold text-gray text-center">
+          Elige un <span className="text-indigo-600">Plazo</span> a pagar
+        </h2>
+
+        <select
+          className="mt-5 p-2 bg-white w-full border border-gray-300 rounded-lg text-center text-xl text-gray-500"
+        >
+          <option value="6">6 meses</option>
+          <option value="12">12 meses</option>
+          <option value="18">18 meses</option>
+        </select>
       </div>
     </>
   );
