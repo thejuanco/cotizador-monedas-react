@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import CustomButton from "./components/CustomButton";
+import { formatearDinero } from "./helpers";
 
 function App() {
   //Uso del state
@@ -61,7 +62,7 @@ function App() {
           step={step}
           value={cantidad} //se muestra el valor actual en el input
         />
-        <p className="text-center my-8 text-5xl font-extrabold text-indigo-600">{cantidad}</p>
+        <p className="text-center my-8 text-5xl font-extrabold text-indigo-600">{formatearDinero(cantidad)}</p>
       </div>
     </>
   );
